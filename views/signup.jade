@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+  script(src='/js/lib/formvalidator.js')
+  span.label.label-warning #{message}
+
+  form#form.form-horizontal(action='/signup', method='POST')
+    fieldset
+        legend Signup
+        .control-group
+          label.control-label(for='email') Email
+          .controls
+            input#email.input-xlarge(name='email', type='text', placeholder='octavio@tangosource.com', required)
+        .control-group
+          label.control-label(for='password') Password:
+          .controls
+            input#password.input-xlarge(name='password', type='password', placeholder='password', required, pattern=".{8,}", title="8 characters minimum")
+        .control-group
+          label.control-label(for='password_c') Confirm password:
+          .controls
+            input#password_c.input-xlarge(name='password_c', type='password', placeholder='confirm password', required)
+        .control-group
+          label.control-label(for='first_name') First name:
+          .controls
+            input#first_name.input-xlarge(name='first_name', type='text', placeholder='octavio', required)
+        .control-group
+          label.control-label(for='last_name') Last name:
+          .controls
+            input#last_name.input-xlarge(name='last_name', type='text', placeholder='Santiago', required)
+        .control-group
+          label.control-label(for='harvest_app') Harvest app:
+          .controls
+            input#harvest_app.input-xlarge(name='harvest_app', type='text', placeholder='tangosource', required)
+        .control-group
+          label.control-label(for='harvest_email') Harvest email:
+          .controls
+            input#harvest_email.input-xlarge(name='harvest_email', type='email', placeholder='octavio@tangosource.com', required)
+        .control-group
+          label.control-label(for='harvest_pwd') Harvest password:
+          .controls
+            input#harvest_pwd.input-xlarge(name='harvest_pwd', type='password', placeholder='password', required)
+        .control-group
+          label.control-label(for='pivotal_token') Pivotal token:
+          .controls
+            input#pivotal_token.input-xlarge(name='pivotal_token', type='text', placeholder='xxxx-xxxx-xxxx-xxxx', required)
+        .control-group
+          .controls
+            button#submit.btn.btn-primary(name='submit', type='submit') Submit
+

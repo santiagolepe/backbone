@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  
+  span.label.label-warning #{message}
+  form.form-horizontal(action='/login', method='POST')
+    fieldset
+        //
+           Form Name 
+        legend Login
+        //
+           Text input
+        .control-group
+          label.control-label(for='email') Email:
+          .controls
+            input#email.input-xlarge(name='email', type='email', placeholder='octavio@tangosource.com', required='')
+        //
+           Password input
+        .control-group
+          label.control-label(for='password') Password:
+          .controls
+            input#password.input-xlarge(name='password', type='password', placeholder='password', required='')
+        //
+           Button 
+        .control-group
+          label.control-label(for='submit')
+          .controls
+            button#submit.btn.btn-primary(name='submit') Submit
+
+        br
+        a(href='/forgot') Forgot password? |
+        a(href='/signup') &nbsp Singup
+
