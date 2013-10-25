@@ -1,0 +1,14 @@
+{
+  "name": "mackbone hapi",
+  "version": "0.0.1",
+  "description": "single page to implement hapi",
+  "author": "Octavio Cesar Santiago Lepe",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.2",
+    "jade": "*"
+  }
+}
