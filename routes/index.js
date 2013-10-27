@@ -1,5 +1,5 @@
 var loginController = require('../controllers/loginController');
-
+var pivotalController = require('../controllers/pivotalController');
 
 //MIDDLEWARE for authentication
 var auth = function(req, res, next){
@@ -33,4 +33,8 @@ module.exports = function(app){
   app.post('/login', loginController.login.bind(loginController));
   app.post('/logout', loginController.logout.bind(loginController));
   app.post('/signup', loginController.signup.bind(loginController));
+
+
+  //PIVOTAL TRACKER
+  app.get('/projects', pivotalController.projects.bind(pivotalController));
 };
